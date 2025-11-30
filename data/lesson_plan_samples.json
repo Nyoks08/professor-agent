@@ -1,0 +1,15 @@
+[
+  {
+    "course_title": "Intro to Data Mining",
+    "level": "Undergraduate",
+    "topic": "Decision Trees",
+    "learning_objectives": [
+      "Explain entropy and information gain",
+      "Interpret a simple decision tree"
+    ],
+    "outline": [
+      {"time_block": "0-10", "title": "Motivation", "description": "Why decision trees"},
+      {"time_block": "10-30", "title": "Entropy", "description": "Intuition + example"}
+    ]
+  }
+]

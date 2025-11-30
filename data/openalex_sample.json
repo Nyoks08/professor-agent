@@ -1,0 +1,68 @@
+[
+  {
+    "id": "https://openalex.org/W2910392324",
+    "doi": "https://doi.org/10.1145/3294008",
+    "title": "Machine Learning Education for Artists, Musicians, and Other Creative Practitioners",
+    "publication_year": 2019,
+    "authorships": [
+      {
+        "author": {
+          "id": "https://openalex.org/A5025661647",
+          "display_name": "Rebecca Fiebrink"
+        },
+        "institutions": [
+          {
+            "id": "https://openalex.org/I55521800",
+            "display_name": "Goldsmiths University of London",
+            "country_code": "GB",
+            "type": "education"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "https://openalex.org/W2741809807",
+    "doi": "https://doi.org/10.1234/responsible-ml-edu.2023",
+    "title": "Towards Responsible Machine Learning Education: A Survey and Future Directions",
+    "publication_year": 2023,
+    "authorships": [
+      {
+        "author": {
+          "id": "https://openalex.org/A9876543210",
+          "display_name": "Jane Doe"
+        },
+        "institutions": [
+          {
+            "id": "https://openalex.org/I1234567890",
+            "display_name": "Famous University",
+            "country_code": "US",
+            "type": "education"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "https://openalex.org/W2735601234",
+    "doi": "https://doi.org/10.2345/data-ethics-curriculum.2022",
+    "title": "Integrating Data Science and Ethics into Undergraduate Curricula",
+    "publication_year": 2022,
+    "authorships": [
+      {
+        "author": {
+          "id": "https://openalex.org/A1122334455",
+          "display_name": "John Smith"
+        },
+        "institutions": [
+          {
+            "id": "https://openalex.org/I1122334455",
+            "display_name": "Another University",
+            "country_code": "US",
+            "type": "education"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "project_title": "Machine Learning Tools to Support Clinical Decision-Making in Primary Care",
+    "agency": "NIH",
+    "institute": "NLM",
+    "mechanism": "R01",
+    "fiscal_year": 2023,
+    "project_num": "R01LM012345",
+    "principal_investigator": "Jane Doe, PhD",
+    "organization": "Midtown University Medical Center",
+    "total_cost": 450000,
+    "project_terms": [
+      "machine learning",
+      "clinical decision support",
+      "primary care",
+      "electronic health records"
+    ],
+    "short_summary": "Develop and evaluate machine learning models that help primary care clinicians identify high-risk patients and choose appropriate follow-up, while ensuring interpretability and clinician oversight."
+  },
+  {
+    "project_title": "Integrating Data Science and Ethics into Undergraduate Health Curricula",
+    "agency": "NIH",
+    "institute": "NIGMS",
+    "mechanism": "R25",
+    "fiscal_year": 2022,
+    "project_num": "R25GM098765",
+    "principal_investigator": "Michael Smith, MD",
+    "organization": "Lakeside College of Health Sciences",
+    "total_cost": 275000,
+    "project_terms": [
+      "data science education",
+      "ethics",
+      "curriculum development",
+      "undergraduate training"
+    ],
+    "short_summary": "Create and assess modular coursework that teaches basic data science and AI ethics to undergraduate pre-health students, emphasizing responsible use of predictive models in clinical and public health settings."
+  },
+  {
+    "project_title": "AI-Enabled Early Detection of Diabetic Retinopathy in Community Clinics",
+    "agency": "NIH",
+    "institute": "NEI",
+    "mechanism": "U01",
+    "fiscal_year": 2024,
+    "project_num": "U01EY067890",
+    "principal_investigator": "Sara Lee, MD, MPH",
+    "organization": "Riverbend University",
+    "total_cost": 620000,
+    "project_terms": [
+      "deep learning",
+      "diabetic retinopathy",
+      "screening",
+      "health disparities"
+    ],
+    "short_summary": "Deploy and validate deep learning-based screening workflows for diabetic retinopathy in low-resource community clinics, focusing on equity, workflow integration, and clinician–AI collaboration."
+  }
+]
