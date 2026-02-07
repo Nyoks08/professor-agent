@@ -1,6 +1,42 @@
-.vscode/
+
+# ----------------------------
+# Python
+# ----------------------------
 __pycache__/
 *.pyc
-.env
+*.pyo
+*.pyd
+*.log
+
+# ----------------------------
+# Virtual environments
+# ----------------------------
+venv/
 .venv/
-data/us_courses_raw.csv
+env/
+
+# ----------------------------
+# Environment variables
+# ----------------------------
+.env
+
+# ----------------------------
+# Frontend (Node / React)
+# ----------------------------
+frontend/node_modules/
+frontend/dist/
+
+# ----------------------------
+# Data & Artifacts (Sensitive)
+# ----------------------------
+data/
+artifacts/
+
+# ----------------------------
+# IDE / OS
+# ----------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
