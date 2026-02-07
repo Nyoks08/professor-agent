@@ -1,42 +1,64 @@
-Professor Agent (Agentic AI) — FastAPI Backend
+# Professor Agent — Agentic AI System  
+**FastAPI Backend · Async Agent Workflows · React Frontend**
 
-A production-style FastAPI backend for a Professor Agent that runs an async, multi-step agent workflow (job-based execution with progress tracking) and includes a literature metadata retrieval service using OpenAlex, Crossref, and arXiv.
+Professor Agent is a production-style **agentic AI system** that runs **asynchronous, multi-step workflows** for academic and research tasks.  
+It combines a **FastAPI backend** with a **React (Vite) frontend**, and includes a **literature metadata retrieval service** powered by OpenAlex, Crossref, and arXiv.
 
-This project is designed for coursework, hackathons, and research demos, while following real-world backend architecture patterns.
+The project is designed for **coursework, hackathons, and research demos**, while intentionally following **real-world backend and system architecture patterns**.
 
-1. What This Project Does
+---
 
-The Professor Agent can:
+## What This Project Does
 
--Start a long-running agent workflow asynchronously
+Professor Agent can:
 
--Track job progress step-by-step (lesson plan, grants, collaborators, literature, proposal)
+- Run long-running **agent workflows asynchronously**
+- Track **job progress step-by-step** (lesson plan, grants, collaborators, literature, proposal)
+- Retrieve **real scholarly metadata** programmatically
+- Expose a clean **REST API** with automatic Swagger documentation
+- Surface workflow status and results through a **React dashboard**
 
--Retrieve real scholarly literature metadata programmatically
+---
 
--Expose a clean REST API with automatic Swagger documentation
+## High-Level Architecture
 
-2. Architecture Overview
+The system is split into two clear layers:
 
-The backend follows a layered architecture:
-api        → HTTP endpoints (public interface)
-services   → business logic & agent workflows
-models     → Pydantic schemas (requests/responses)
-infra      → infrastructure (job store, background execution)
-core       → configuration, logging, CORS
+### Backend (FastAPI)
+- Manages agent workflows and background execution
+- Exposes REST endpoints
+- Orchestrates retrieval pipelines and job state
 
-This separation keeps the system: maintainable, testable, and easy to extend (e.g., replace in-memory jobs with Redis later).
+### Frontend (React + Vite)
+- Submits agent jobs
+- Polls job status
+- Displays intermediate and final results
 
-3. Repository Structure
+The backend follows a **layered architecture**:
+
+- **api** → HTTP endpoints (public interface)  
+- **services** → business logic & agent workflows  
+- **models** → Pydantic schemas  
+- **infra** → infrastructure (job store, background execution)  
+- **core** → configuration, logging, CORS  
+
+This separation keeps the system **maintainable, testable, and easy to extend** (e.g., replacing in-memory jobs with Redis).
+
+---
+
+## Repository Structure
+
+```text
 .
 ├── backend/
 │   └── app/
-│       ├── main.py
+│       ├── main.py                 # FastAPI entry point
 │       ├── api/
 │       │   ├── router.py
 │       │   └── endpoints/
 │       │       ├── agentic_async.py
-│       │       └── literature.py
+│       │       ├── literature.py
+│       │       └── retrieval.py
 │       ├── core/
 │       │   ├── config.py
 │       │   ├── cors.py
@@ -46,16 +68,46 @@ This separation keeps the system: maintainable, testable, and easy to extend (e.
 │       ├── models/
 │       │   ├── agentic.py
 │       │   └── literature.py
-│       ├── services/
-│       │   ├── agentic_service.py
-│       │   ├── literature_service.py
-│       │   └── literature_sources.py
-│       └── requirements.txt
-├── data/                  (local only, not committed)
-│   └── README.md
+│       ├── pipelines/
+│       │   ├── build_corpus.py
+│       │   ├── ingest.py
+│       │   ├── preprocess.py
+│       │   └── run_pipeline.py
+│       └── services/
+│           ├── agentic_service.py
+│           ├── literature_service.py
+│           ├── literature_sources.py
+│           └── retrieval_service.py
+│
+├── frontend/
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── vite.config.js
+│   └── src/
+│       ├── main.jsx
+│       ├── App.jsx
+│       ├── api/
+│       │   └── agentApi.js
+│       ├── components/
+│       │   ├── ContextResults.jsx
+│       │   ├── JobForm.jsx
+│       │   ├── JobStatus.jsx
+│       │   └── StepList.jsx
+│       ├── hooks/
+│       │   └── useAgentJob.js
+│       ├── pages/
+│       │   └── AgentDashboard.jsx
+│       └── styles/
+│           └── main.css
+│
 ├── scripts/
-├── .env                   (local only, not committed)
+│   └── clean_hackathon_data.py
+│
+├── data/                    # local only (not committed)
+├── .env                     # local only (not committed)
 ├── .gitignore
+├── requirements.txt
 └── README.md
 
 4. Data
@@ -67,7 +119,7 @@ data/
 ├── faculty_profiles_raw/
 ├── faculty_profiles_clean/
 ├── grants_raw/
-├── grants_clean/
+└── grants_clean/
 
 For local development, place raw and cleaned datasets under data/.
 See data/README.md for additional guidance.
